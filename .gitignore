@@ -2,6 +2,7 @@
 slack-bolt-lambda
 slack-bolt-lambda.zip
 vendor/
+.DS_Store
 
 
 # Gitignore Python template
