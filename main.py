@@ -27,6 +27,9 @@ def handler(event, context):
     for key, value in event.items():
         if key == "body":
             print(f"[SLACK MESSAGE BODY]: {value}")
+            # Return challenge for authentication with slack
+            if "challenge" in value:
+                return value
 
     slack_handler = SlackRequestHandler(app=app)
     return slack_handler.handle(event, context)
